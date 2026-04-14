@@ -41,7 +41,8 @@ def count(timer):
     """
     Retorna el numero de vueltas agregadas.
     """
-    
+    return len(timer["times"])
+
     # TODO: Implementar
     pass
 
