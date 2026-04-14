@@ -106,6 +106,22 @@ def longest_decreasing_streak(timer):
     Retorna la longitud maxima de una secuencia de vueltas consecutivas
     donde los tiempos disminuyen estrictamente.
     """
+    times = timer["times"]
+    
+    if not times:
+        return 0
+    
+    max_streak = 1
+    current_streak = 1
+    
+    for i in range(1, len(times)):
+        if times[i] < times[i - 1]:
+            current_streak += 1
+            max_streak = max(max_streak, current_streak)
+        else:
+            current_streak = 1
+    
+    return max_streak
 
     # TODO: Implementar
     pass
