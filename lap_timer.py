@@ -94,6 +94,7 @@ def longest_decreasing_streak(timer):
     Retorna la longitud maxima de una secuencia de vueltas consecutivas
     donde los tiempos disminuyen estrictamente.
     """
+    
     # TODO: Implementar
     pass
 
