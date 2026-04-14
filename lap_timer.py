@@ -84,6 +84,18 @@ def fastest_multi_lap(timer, k):
     Retorna el tiempo acumulado mas rapido de cualquier k vueltas consecutivas.
     """
     times = timer["times"]
+    
+    if len(times) < k:
+        return None
+    
+    min_sum = float("inf")
+    
+    for i in range(len(times) - k + 1):
+        current_sum = sum(times[i:i+k])
+        if current_sum < min_sum:
+            min_sum = current_sum
+    
+    return min_sum
     # TODO: Implementar
     
     pass
@@ -94,7 +106,7 @@ def longest_decreasing_streak(timer):
     Retorna la longitud maxima de una secuencia de vueltas consecutivas
     donde los tiempos disminuyen estrictamente.
     """
-    
+
     # TODO: Implementar
     pass
 
