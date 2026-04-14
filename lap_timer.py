@@ -72,7 +72,9 @@ def fastest_lap(timer):
     """
     Retorna el tiempo mas rapido de cualquier vuelta.
     """
-    print(v)
+    if not timer["times"]:
+        return None
+    return min(timer["times"])
     # TODO: Implementar
     pass
 
