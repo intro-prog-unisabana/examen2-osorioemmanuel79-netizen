@@ -51,6 +51,7 @@ def cumulative_time(timer):
     """
     Retorna el tiempo acumulado de todas las vueltas.
     """
+    int 
     # TODO: Implementar
     pass
 
